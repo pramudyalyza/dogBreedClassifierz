@@ -84,7 +84,7 @@ with tab1:
         col1, col2 = st.columns([2, 1])
 
         with col1:
-            st.image(image, caption="Your Image", use_column_width=True)
+            st.image(image, caption="Your Image", use_container_width=True)
 
         predicted_label, confidence = predict_image(image)
 
@@ -107,7 +107,7 @@ with tab2:
         image = Image.open(file_path)
 
         with cols[i % 3]:
-            st.image(image, use_column_width=True)
+            st.image(image, use_container_width=True)
 
             left, center, right = st.columns([1, 2, 1])
             with center:
@@ -122,7 +122,7 @@ with tab2:
             col1, col2 = st.columns([2, 1])
 
             with col1:
-                st.image(image, caption="Selected Image", use_column_width=True)
+                st.image(image, caption="Selected Image", use_container_width=True)
 
             predicted_label, confidence = predict_image(image)
 

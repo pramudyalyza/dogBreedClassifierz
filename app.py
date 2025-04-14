@@ -84,7 +84,7 @@ if image:
     col1, col2 = st.columns([2, 1])  # wider image, narrower result
 
     with col1:
-        st.image(image, caption="Your Image", use_column_width=True)
+        st.image(image, caption="Your Image", use_container_width=True)
 
     predicted_label, confidence = predict_image(image)
 

@@ -1,9 +1,3 @@
-# import torch
-# import torch.nn as nn
-# from torchvision import models, transforms
-# from PIL import Image
-# import streamlit as st
-
 import os
 import torch
 import warnings
@@ -85,10 +79,9 @@ with tab1:
             except:
                 st.error("⚠️ Failed to load image from URL.")
 
-    # Show and predict
     if image:
         st.markdown("### Prediction")
-        col1, col2 = st.columns([2, 1])  # wider image, narrower result
+        col1, col2 = st.columns([2, 1])
 
         with col1:
             st.image(image, caption="Your Image", use_column_width=True)
@@ -102,7 +95,7 @@ with tab1:
 with tab2:
     sample_folder = "samples"
     sample_files = os.listdir(sample_folder)
-    sample_files.sort()  # optional, to keep order
+    sample_files.sort()
 
     st.caption("Choose a sample image:")
 
@@ -116,7 +109,6 @@ with tab2:
         with cols[i % 3]:
             st.image(image, use_column_width=True)
 
-            # Use an empty column to center the button
             left, center, right = st.columns([1, 2, 1])
             with center:
                 if st.button("🔍 Predict", key=f"sample_{i}"):

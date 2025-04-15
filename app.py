@@ -50,6 +50,7 @@ def predict_image(image):
     return predicted_label, confidence.item() * 100
 
 # Streamlit UI
+st.set_page_config(page_title="DogBreedClassifierz", page_icon="🐶", layout="wide")
 st.title("🐶 DogBreedClassifierz")
 st.markdown("Upload an image, take a photo, paste an image URL, or use sample image to predict the dog breed!")
 
